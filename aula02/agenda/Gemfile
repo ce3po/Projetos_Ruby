@@ -12,3 +12,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+#torna possivel rodar javascript no rails
+gem 'therubyracer'
