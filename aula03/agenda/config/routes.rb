@@ -1,4 +1,6 @@
 Agenda::Application.routes.draw do
+  resources :contatos
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
