@@ -1,4 +1,4 @@
-<h1>Listing contatos</h1>
+<h1>Lista os contatos</h1>
 
 <table>
   <tr>
@@ -15,13 +15,13 @@
     <td><%= contato.nome %></td>
     <td><%= contato.email %></td>
     <td><%= contato.nascimento %></td>
-    <td><%= link_to 'Show', contato %></td>
-    <td><%= link_to 'Edit', edit_contato_path(contato) %></td>
-    <td><%= link_to 'Destroy', contato, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Mostra', contato %></td>
+    <td><%= link_to 'Altera', edit_contato_path(contato) %></td>
+    <td><%= link_to 'Exclui', contato, confirm: 'Tem certeza?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Contato', new_contato_path %>
+<%= link_to 'Novo Contato', new_contato_path %>
