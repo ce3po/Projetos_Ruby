@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Agenda::Application.config.secret_token = '4daf8617724ee0f52a29e481c10397ae6d4f9cefe7a6dfe6620194be98a6329aef0ccef34736b940deab73edc406227b6960ff0c7570aacd98ddfd7e005726a5'
+Agenda::Application.config.secret_token = 'ef1acbe62bf12bc9984d861cc4f00f8bb63f73f55cf3058f7039297ef76891b6643304079175176cdd97f02b879c0101a75ce5fc1c81d2670e7aaaab9a0257d7'
