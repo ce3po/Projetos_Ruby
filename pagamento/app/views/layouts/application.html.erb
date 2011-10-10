@@ -13,5 +13,11 @@
 
 <%= yield %>
 
+
+<% if current_usuario %>
+<br><hr>
+<%= link_to 'Sair', destroy_usuario_session_path, method: :delete %>
+<% end %>
+
 </body>
 </html>
