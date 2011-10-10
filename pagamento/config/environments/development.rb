@@ -28,5 +28,6 @@ Pagamento::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
+  # configuracao de email para o aplicativo devise
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
