@@ -18,8 +18,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'brazilian-rails'
 
 group :development, :test do
 	gem 'therubyracer'
-	gem 'rspec-rails'
+	gem 'rspec-rails' 
 end
