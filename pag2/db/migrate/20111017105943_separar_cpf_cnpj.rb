@@ -1,7 +1,4 @@
 class SepararCpfCnpj < ActiveRecord::Migration
-  def up
-  end
-
-  def down
+  def change
   end
 end
