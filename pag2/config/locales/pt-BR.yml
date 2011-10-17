@@ -234,6 +234,14 @@
         taken: "já está em uso"
         record_invalid: "A validação falhou: %{errors}"
         <<: *errors_messages
+      
+      models:
+        fornecedor:
+          attributes:
+            cnpj:
+              erro_cnpjComCPF: "Não é válido com CPF"
+            cpf:
+              erro_cpfComCNPJ: "Não é valido com CNPJ"
 
       full_messages:
         format: "%{attribute} %{message}"

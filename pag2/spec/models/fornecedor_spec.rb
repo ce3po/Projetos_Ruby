@@ -16,7 +16,11 @@ describe Fornecedor do
 	end
 
 	it "valida CNPJ" do
-		Fornecedor.new(nome: 'Fulano', cnpj: '00000000000191').should be_valid
+		Fornecedor.new(nome: 'BB', cnpj: '00000000000191').should be_valid
 		Fornecedor.new(nome: 'Fulano', cnpj: '1').should be_invalid
+	end
+
+	it "não aceita CPF e CNPJ juntos" do
+		Fornecedor.new(nome: 'Fulano', cpf: '81251172296', cnpj: '00000000000191').should be_valid
 	end
 end
