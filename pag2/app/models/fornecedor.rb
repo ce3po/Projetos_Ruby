@@ -4,11 +4,14 @@ require "brcpfcnpj"
 
 class Fornecedor < ActiveRecord::Base
 	validates :nome, presence: true
+	validates :cnpj, presence: true, if: :pj?
+	validates :cpf,  presence: true, unless: :pj?
 	validate :cpf_ou_cnpj
 	validate :cpfcnpj_vazio
 	usar_como_cpf :cpf
 	usar_como_cnpj :cnpj
 
+  private
 	def cpf_ou_cnpj
 		if cpf.present? and cnpj.present?
 #			errors[:base] << :erro_cpfComCNPJ
