@@ -37,5 +37,4 @@ describe Fornecedor do
 		Fornecedor.new(nome: 'Banco', pj: false, cpf: '81251172296').should be_valid
 		Fornecedor.new(nome: 'Brasil', pj: false, cnpj: '00000000000191').should be_invalid
 	end
-
 end
