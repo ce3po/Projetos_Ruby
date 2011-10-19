@@ -61,7 +61,7 @@ class FornecedoresController < ApplicationController
     @fornecedor = Fornecedor.find(params[:id])
     
       if @fornecedor.update_attributes(params[:fornecedor])
-        redirect_to @fornecedores_path, notice: 'Fornecedor foi atualizado.'         
+        redirect_to fornecedores_path, notice: 'Fornecedor foi atualizado.'         
       else
         render action: "edit"         
       end    

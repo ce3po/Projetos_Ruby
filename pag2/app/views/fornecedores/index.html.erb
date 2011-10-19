@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Nome</th>
+    <th>PJ | PF</th>
     <th>CNPJ/CPF</th>
     <th></th>
     <th></th>
@@ -11,7 +12,13 @@
 <% @fornecedores.each do |fornecedor| %>
   <tr>
     <td><%= fornecedor.nome %></td>
-    <td><%= fornecedor.cnpj_cpf %></td>
+    <td><%= fornecedor.pj? ? 'PJ' : 'PF'%></td>
+    <% if fornecedor.pj? %>
+      <td><%= fornecedor.cnpj %></td>
+    <% else %>
+      <td><%= fornecedor.cpf %></td>
+    <% end %>
+
     <!--<td><%= link_to 'Show', fornecedor %></td>-->
     <% if usuario_signed_in?  %>
     <td><%= link_to 'Editar', edit_fornecedor_path(fornecedor) %></td>
