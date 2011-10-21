@@ -2,8 +2,8 @@
 
 <b>Caixa:</b> <%= @conformidade.caixa %> </br>
 <b>Processo:</b> <%= @conformidade.processo %> </br>
-<b>Data:</b> <%= @conformidade.data %> </br>
-<b>Valor:</b> <%= @conformidade.valor %> </br>
+<b>Data:</b> <%= localize @conformidade.data %> </br>
+<b>Valor:</b> <%= number_to_currency @conformidade.valor %> </br>
 <b>Fornecedor:</b> <%= @conformidade.fornecedor.nome %> </br>
 <b>Observação:</b> <%= @conformidade.observacao %> </br></br>
 

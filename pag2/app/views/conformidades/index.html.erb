@@ -17,8 +17,8 @@
   <tr>
     <td><%= conformidade.caixa %></td>
     <td><%= conformidade.processo %></td>
-    <td><%= conformidade.data %></td>
-    <td><%= conformidade.valor %></td>
+    <td><%= localize conformidade.data %></td>
+    <td><%= number_to_currency conformidade.valor %></td>
     <td><%= conformidade.fornecedor.nome %></td>
     <td><%= link_to 'Detalhes', conformidade %></td>
     <% if usuario_signed_in? %>

@@ -1,6 +1,6 @@
-.bundle
 *.sqlite3
 *.log
+.bundle
 tmp/
 .sass-cache/
 *~
