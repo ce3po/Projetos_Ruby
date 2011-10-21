@@ -19,6 +19,22 @@
     <%= f.label :processo %><br />
     <%= f.text_field :processo %>
   </div>
+  <div class="field">
+    <%= f.label :data %><br />
+    <%= f.date_select :data %>
+  </div>
+  <div class="field">
+    <%= f.label :fornecedor %><br />
+    <%= f.collection_select(:fornecedor_id, Fornecedor.all, :id, :nome) %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br />
+    <%= f.text_field :valor %>
+  </div>
+  <div class="field">
+    <%= f.label 'Observação' %><br />
+    <%= f.text_area :observacao, :size => "80x10" %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

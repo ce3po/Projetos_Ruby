@@ -4,7 +4,6 @@ class FornecedoresController < ApplicationController
   
   before_filter :authenticate_usuario!, except: [:index]
 
-
   def index
     @fornecedores = Fornecedor.all
 

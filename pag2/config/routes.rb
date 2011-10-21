@@ -6,7 +6,7 @@ Pagamento::Application.routes.draw do
 
   devise_for :usuarios
 
-  root :to => 'fornecedores#index'
+  root :to => 'conformidades#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

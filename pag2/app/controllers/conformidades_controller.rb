@@ -1,4 +1,8 @@
+# encoding: utf-8
+
 class ConformidadesController < ApplicationController
+  before_filter :authenticate_usuario!, except: [:index, :show]
+
   # GET /conformidades
   # GET /conformidades.json
   def index
