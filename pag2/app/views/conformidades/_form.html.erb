@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :data %><br />
-    <%= f.text_field :data %>
+    <%= f.text_field :data, value: localize(@conformidade.data||Date.today) %>
   </div>
   <div class="field">
     <%= f.label :fornecedor %><br />
@@ -36,6 +36,6 @@
     <%= f.text_area :observacao, :size => "80x10" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Grava Conformidade' %>
   </div>
 <% end %>
