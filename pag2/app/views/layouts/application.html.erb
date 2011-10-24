@@ -23,8 +23,11 @@
 <br><hr>
 
 <nav>
-<%= link_to 'Conformidades', conformidades_path %>
-<%= link_to 'Fornecedores', fornecedores_path %>
+	<%= link_to 'Conformidades', conformidades_path %>
+	<%= link_to 'Fornecedores', fornecedores_path %>
+	<% if usuario_signed_in? %>
+		<%= link_to 'Usuários', usuarios_path %>
+	<% end %>
 </nav>
 
 <%= yield %>
