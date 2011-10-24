@@ -48,7 +48,7 @@ class ConformidadesController < ApplicationController
 
     respond_to do |format|
       if @conformidade.save
-        format.html { redirect_to @conformidade, notice: 'Conformidade was successfully created.' }
+        format.html { redirect_to @conformidade, notice: 'Conformidade foi criado com sucesso.' }
         format.json { render json: @conformidade, status: :created, location: @conformidade }
       else
         format.html { render action: "new" }
@@ -64,7 +64,7 @@ class ConformidadesController < ApplicationController
 
     respond_to do |format|
       if @conformidade.update_attributes(params[:conformidade])
-        format.html { redirect_to @conformidade, notice: 'Conformidade was successfully updated.' }
+        format.html { redirect_to @conformidade, notice: 'Conformidade alterado com sucesso.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
@@ -78,6 +78,8 @@ class ConformidadesController < ApplicationController
   def destroy
     @conformidade = Conformidade.find(params[:id])
     @conformidade.destroy
+
+    redirect_to fornecedores_path, notice: 'Conformidade excluída.'
 
     respond_to do |format|
       format.html { redirect_to conformidades_url }

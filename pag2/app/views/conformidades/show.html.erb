@@ -5,6 +5,7 @@
 <b>Data:</b> <%= localize @conformidade.data %> </br>
 <b>Valor:</b> <%= number_to_currency @conformidade.valor %> </br>
 <b>Fornecedor:</b> <%= @conformidade.fornecedor.nome %> </br>
+<b>Publicado:</b> <%= @conformidade.publicado? ? 'Sim' : 'Não' %> </br>
 <b>Observação:</b> <%= @conformidade.observacao %> </br></br>
 
 <% if usuario_signed_in? %>

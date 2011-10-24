@@ -11,17 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111021104030) do
+ActiveRecord::Schema.define(:version => 20111024133831) do
 
   create_table "conformidades", :force => true do |t|
     t.string   "caixa"
     t.string   "processo"
     t.date     "data"
     t.text     "observacao"
-    t.decimal  "valor",         :precision => 2, :scale => 9
+    t.decimal  "valor"
     t.integer  "fornecedor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "publicado"
   end
 
   create_table "fornecedores", :force => true do |t|
@@ -31,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20111021104030) do
     t.string   "nome"
     t.string   "cpf"
     t.boolean  "pj"
+    t.boolean  "publicado"
   end
 
   create_table "usuarios", :force => true do |t|

@@ -5,6 +5,7 @@
     <th>Nome</th>
     <th>PJ | PF</th>
     <th>CNPJ/CPF</th>
+    <th>Publicado</th>
     <th></th>
     <th></th>
   </tr>
@@ -18,6 +19,7 @@
     <% else %>
       <td><%= fornecedor.cpf %></td>
     <% end %>
+    <td><%= fornecedor.publicado? ? 'Sim' : 'Não' %></td>
 
     <!--<td><%= link_to 'Show', fornecedor %></td>-->
     <% if usuario_signed_in?  %>

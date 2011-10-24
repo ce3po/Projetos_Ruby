@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class UsuariosController < ApplicationController
 
   before_filter :authenticate_usuario!
@@ -47,7 +49,7 @@ class UsuariosController < ApplicationController
 
     respond_to do |format|
       if @usuario.save
-        format.html { redirect_to @usuario, notice: 'Usuario was successfully created.' }
+        format.html { redirect_to @usuario, notice: 'Usuário criado com sucesso.' }
         format.json { render json: @usuario, status: :created, location: @usuario }
       else
         format.html { render action: "new" }
@@ -63,7 +65,7 @@ class UsuariosController < ApplicationController
 
     respond_to do |format|
       if @usuario.update_attributes(params[:usuario])
-        format.html { redirect_to @usuario, notice: 'Usuario was successfully updated.' }
+        format.html { redirect_to @usuario, notice: 'Usuário foi alterado com sucesso.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

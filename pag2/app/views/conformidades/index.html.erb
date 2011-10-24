@@ -6,6 +6,7 @@
     <th>Data</th>
     <th>Valor</th>
     <th>Fornecedor</th>
+    <th>Publicado</th>
     <th></th>
     <% if usuario_signed_in? %>
         <th></th>
@@ -20,6 +21,7 @@
     <td><%= localize conformidade.data %></td>
     <td><%= number_to_currency conformidade.valor %></td>
     <td><%= conformidade.fornecedor.nome %></td>
+    <td><%= conformidade.publicado? ? 'Sim' : 'Não' %></td>
     <td><%= link_to 'Detalhes', conformidade %></td>
     <% if usuario_signed_in? %>
         <td><%= link_to 'Editar', edit_conformidade_path(conformidade) %></td>

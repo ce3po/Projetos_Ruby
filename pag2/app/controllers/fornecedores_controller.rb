@@ -46,7 +46,7 @@ class FornecedoresController < ApplicationController
     @fornecedor = Fornecedor.new(params[:fornecedor])
 
       if @fornecedor.save
-        redirect_to fornecedores_path, notice: 'Fornecedor foi cadastrado.' 
+        redirect_to fornecedores_path, notice: 'Fornecedor cadastrado com sucesso.' 
       else
         render action: "new"
       end
@@ -60,7 +60,7 @@ class FornecedoresController < ApplicationController
     @fornecedor = Fornecedor.find(params[:id])
     
       if @fornecedor.update_attributes(params[:fornecedor])
-        redirect_to fornecedores_path, notice: 'Fornecedor foi atualizado.'         
+        redirect_to fornecedores_path, notice: 'Fornecedor alterado com sucesso.'
       else
         render action: "edit"         
       end    
