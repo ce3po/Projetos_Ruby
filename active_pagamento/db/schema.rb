@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111024115310) do
+ActiveRecord::Schema.define(:version => 20111024123727) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -45,5 +45,24 @@ ActiveRecord::Schema.define(:version => 20111024115310) do
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
+
+  create_table "fornecedors", :force => true do |t|
+    t.string   "cnpj"
+    t.string   "cpf"
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pagamentos", :force => true do |t|
+    t.string   "caixa"
+    t.string   "processo"
+    t.date     "data"
+    t.text     "observacao"
+    t.decimal  "valor",         :precision => 2, :scale => 9
+    t.integer  "fornecedor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
