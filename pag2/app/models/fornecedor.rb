@@ -14,6 +14,13 @@ class Fornecedor < ActiveRecord::Base
 	usar_como_cpf :cpf
 	usar_como_cnpj :cnpj
 
+  # maneiras para ordenar os fornecedores em ordem alfabética
+  # scope :default, order ('nome ASC') 
+  # scope :ordenado_nome, order ('nome ASC') ou as linhas abaixo
+  def self.ordenado_nome
+  	order('nome ASC')
+  end
+
   private
 	def cpf_ou_cnpj
 		if cpf.present? and cnpj.present?
