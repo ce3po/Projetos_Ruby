@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111024133831) do
+ActiveRecord::Schema.define(:version => 20111026132714) do
 
   create_table "conformidades", :force => true do |t|
     t.string   "caixa"
@@ -35,6 +35,12 @@ ActiveRecord::Schema.define(:version => 20111024133831) do
     t.boolean  "publicado"
   end
 
+  create_table "papels", :force => true do |t|
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "usuarios", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
@@ -48,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20111024133831) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "papel_id"
   end
 
   add_index "usuarios", ["email"], :name => "index_usuarios_on_email", :unique => true

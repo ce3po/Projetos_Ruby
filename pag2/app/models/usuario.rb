@@ -6,4 +6,7 @@ class Usuario < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
+
+  #O usuario tem um papel (com chave estrageira)
+  belongs_to :papel
 end
