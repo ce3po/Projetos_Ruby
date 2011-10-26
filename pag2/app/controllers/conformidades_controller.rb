@@ -6,8 +6,8 @@ class ConformidadesController < ApplicationController
   # GET /conformidades
   # GET /conformidades.json
   def index
-    @conformidades = Conformidade.all
-    @conformidades = Conformidade.page(params[:page]).per(3)
+#    @conformidades = Conformidade.all
+    @conformidades = Conformidade.order.reverse_order.page(params[:page]).per(3)
 
     respond_to do |format|
       format.html # index.html.erb
