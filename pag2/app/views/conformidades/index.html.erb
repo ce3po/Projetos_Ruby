@@ -1,3 +1,4 @@
+<center>
 <h1>Lista de Conformidades</h1>
 <table>
   <tr>
@@ -32,7 +33,10 @@
 </table>
 
 <br/>
+<%= paginate @conformidades %>
+<br/>
 
 <% if usuario_signed_in? %>
     <%= link_to 'Nova Conformidade', new_conformidade_path %>
 <% end %>
+</center>

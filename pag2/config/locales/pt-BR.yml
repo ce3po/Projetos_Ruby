@@ -234,7 +234,7 @@
         taken: "já está em uso"
         record_invalid: "A validação falhou: %{errors}"
         <<: *errors_messages
-      
+
       models:
         fornecedor:
           attributes:
@@ -245,3 +245,11 @@
 
       full_messages:
         format: "%{attribute} %{message}"
+
+  views:
+    pagination:
+      first: "Primeiro"
+      next: "Próximo &raquo;"
+      previous: "&laquo; Anterior"
+      last: "Último"
+      truncate: "..."

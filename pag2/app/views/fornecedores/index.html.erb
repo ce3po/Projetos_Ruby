@@ -1,3 +1,4 @@
+<center>
 <h1>Lista dos Fornecedores</h1>
 
 <table>
@@ -33,9 +34,11 @@
 <% end %>
 </table>
 
-<br />
-
+<br/>
+<%= paginate @fornecedores %>
+<br/>
 
 <% if usuario_signed_in? %>
 <%= link_to 'Novo Fornecedor', new_fornecedor_path %>
 <% end %>
+</center>
