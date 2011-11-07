@@ -8,6 +8,7 @@ gem 'jquery-rails'		# implementa JQuery
 gem 'kaminari'			# faz a paginação de dados
 
 gem 'thin'				# servidor padrao de Ruby on Rails
+gem 'cancan'			# padroniza permissoes de usuarios
 
 # gem 'pg', group: :production
 

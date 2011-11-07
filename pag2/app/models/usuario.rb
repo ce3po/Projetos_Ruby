@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class Usuario < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
@@ -9,4 +11,16 @@ class Usuario < ActiveRecord::Base
 
   #O usuario tem um papel (com chave estrageira)
   belongs_to :papel
+
+  def admin?
+  	papel.nome == 'Administrador'
+  end
+
+  def avancado?
+  	papel.nome == 'Avançado'
+  end
+
+  def visitante?
+  	papel.nome == 'Visitante'
+  end
 end

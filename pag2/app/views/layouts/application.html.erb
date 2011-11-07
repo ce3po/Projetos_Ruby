@@ -12,6 +12,7 @@
 
 <div class="div_usuario">
 	<% if usuario_signed_in? %>
+		<%= current_usuario.email %>
 		<%= link_to 'Sair', destroy_usuario_session_path, method: :delete %>
 	<% else %>
 		<%= link_to 'Entrar', new_usuario_session_path %>
@@ -25,7 +26,7 @@
 <nav>
 	<%= link_to 'Conformidades', conformidades_path %>
 	<%= link_to 'Fornecedores', fornecedores_path %>
-	<% if usuario_signed_in? %>
+	<% if can? :manage, Usuario %>
 		<%= link_to 'Usuários', usuarios_path %>
 	<% end %>
 </nav>

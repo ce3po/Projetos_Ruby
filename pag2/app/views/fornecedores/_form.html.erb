@@ -31,10 +31,12 @@
     <%= f.text_field :cnpj %>
   </div>
 
-  <div class="field">
-    <%= f.label :publicado %><br />
-    <%= f.check_box :publicado %>
-  </div>
+  <% if can? :publicar, @fornecedor %>
+    <div class="field">
+      <%= f.label :publicado %><br />
+      <%= f.check_box :publicado %>
+    </div>
+  <% end %>
 
   <div class="actions">
     <%= f.submit 'Grava Fornecedor' %>

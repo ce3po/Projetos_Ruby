@@ -8,7 +8,7 @@
     <th>Valor</th>
     <th>Fornecedor</th>
     <th>Publicado</th>
-    <th></th>
+<!--    <th></th> -->
     <% if usuario_signed_in? %>
         <th></th>
         <th></th>
@@ -23,10 +23,11 @@
     <td><%= number_to_currency conformidade.valor %></td>
     <td><%= conformidade.fornecedor.nome %></td>
     <td><%= conformidade.publicado? ? 'Sim' : 'Não' %></td>
-    <td><%= link_to 'Detalhes', conformidade %></td>
+<!--    <td><%= link_to 'Detalhes', conformidade %></td> -->
     <% if usuario_signed_in? %>
-        <td><%= link_to 'Editar', edit_conformidade_path(conformidade) %></td>
-        <td><%= link_to 'Excluir', conformidade, confirm: 'Tem certeza?', method: :delete %></td>
+        <td><%= link_to image_tag("edit.jpg", :border=>0), edit_conformidade_path(conformidade) %></td>
+        <td><%= link_to image_tag("delete.jpg", :border=>0), conformidade, confirm: 'Tem certeza?', method: :delete %></td>
+
     <% end %>
   </tr>
 <% end %>
