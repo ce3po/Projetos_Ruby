@@ -7,7 +7,7 @@ class Ability
     if usuario.admin?
        can :manage, :all
     elsif usuario.avancado?
-       can [:read, :create], [Conformidade, Fornecedor]
+       can [:read, :create, :ver_coluna_publicada], [Conformidade, Fornecedor]
     else
        can :read, [Conformidade, Fornecedor], {publicado: true}
     end

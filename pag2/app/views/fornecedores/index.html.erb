@@ -6,7 +6,9 @@
     <th>Nome</th>
     <th>PJ | PF</th>
     <th>CNPJ/CPF</th>
-    <th>Publicado</th>
+    <% if can? :ver_coluna_publicada, @fornecedores %>
+      <th>Publicado</th>
+    <% end %>  
     <th></th>
     <th></th>
   </tr>
@@ -20,8 +22,9 @@
     <% else %>
       <td><%= fornecedor.cpf %></td>
     <% end %>
-    <td><%= fornecedor.publicado? ? 'Sim' : 'Não' %></td>
-
+    <% if can? :ver_coluna_publicada, @fornecedores %>
+      <td><%= fornecedor.publicado? ? 'Sim' : 'Não' %></td>
+    <% end %>  
     <!--<td><%= link_to 'Show', fornecedor %></td>-->
     <% if usuario_signed_in?  %>
     <td><%= link_to image_tag("edit.jpg", :border=>0), edit_fornecedor_path(fornecedor) %></td>
