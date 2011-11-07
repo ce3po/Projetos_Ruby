@@ -8,7 +8,8 @@ class ConformidadesController < ApplicationController
   def index
 #    @conformidades = Conformidade.all
 #    @conformidades = Conformidade.order(:id).reverse_order.page(params[:page]).per(3)
-    @conformidades = Conformidade.accessible_by(current_ability).inverso_id.page(params[:page]).per(10)
+    @busca = Conformidade.search(params[:search])
+    @conformidades = @busca.relation.accessible_by(current_ability).inverso_id.page(params[:page]).per(10)
 
     respond_to do |format|
       format.html # index.html.erb

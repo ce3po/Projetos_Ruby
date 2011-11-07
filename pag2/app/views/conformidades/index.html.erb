@@ -1,12 +1,13 @@
 <center>
 <h1>Lista de Conformidades</h1>
+
 <table>
   <tr>
-    <th>Caixa</th>
-    <th>Processo</th>
-    <th>Data</th>
-    <th>Valor</th>
-    <th>Fornecedor</th>
+    <th><%= sort_link @busca, :caixa %></th>
+    <th><%= sort_link @busca, :processo %></th>
+    <th><%= sort_link @busca, :data %></th>
+    <th><%= sort_link @busca, :valor %></th>
+    <th><%= sort_link @busca, :fornecedor_nome %></th>
     <% if can? :ver_coluna_publicada, @fornecedores %>
         <th>Publicado</th>
     <% end %>
@@ -45,3 +46,20 @@
     <%= link_to 'Nova Conformidade', new_conformidade_path %>
 <% end %>
 </center>
+<hr>
+<%= form_for @busca do |f| %>
+    <div>
+        <%= f.label :caixa %>
+        <%= f.text_field :caixa_contains %>
+    </div>
+    <div>
+        <%= f.label 'Data entre' %>
+        <%= f.text_field :data_gte %>
+        <%= f.label 'e' %>
+        <%= f.text_field :data_lte %>
+    </div>
+    <div>
+        <%= f.submit :busca %>
+        <input type="reset" value="Limpar" >
+    </div>
+<% end %>

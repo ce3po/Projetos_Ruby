@@ -9,6 +9,7 @@ gem 'kaminari'			# faz a paginação de dados
 
 gem 'thin'				# servidor padrao de Ruby on Rails
 gem 'cancan'			# padroniza permissoes de usuarios
+gem 'meta_search'		# Facilita a pesquisa de dados
 
 # gem 'pg', group: :production
 
