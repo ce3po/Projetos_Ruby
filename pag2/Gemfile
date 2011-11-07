@@ -7,6 +7,8 @@ gem 'devise'			# faz autenticação
 gem 'jquery-rails'		# implementa JQuery
 gem 'kaminari'			# faz a paginação de dados
 
+gem 'thin'				# servidor padrao de Ruby on Rails
+
 # gem 'pg', group: :production
 
 group :development	do
