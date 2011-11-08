@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20111026132714) do
     t.string   "processo"
     t.date     "data"
     t.text     "observacao"
-    t.decimal  "valor"
+    t.decimal  "valor",         :precision => 2, :scale => 9
     t.integer  "fornecedor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
